@@ -1,0 +1,52 @@
+body {
+    background-color: #4a15b4;
+}
+
+.spinner {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.spinner .dot{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    animation: spin 1s infinite;
+}
+
+.spinner .dot::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: #FFF;
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg)
+    }
+}
+
+.spinner .dot:nth-child(2){
+    animation-delay: 100ms;
+}
+
+.spinner .dot:nth-child(3){
+    animation-delay: 300ms;
+}
+
+.spinner .dot:nth-child(4){
+    animation-delay: 400ms;
+}
+
+.spinner .dot:nth-child(5){
+    animation-delay: 500ms;
+}
